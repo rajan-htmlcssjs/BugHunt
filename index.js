@@ -12,7 +12,7 @@ let timePending = 90
 insectGroupImgs.forEach((ele)=> allImageSources.push(ele.src))
 let selectedInsectSrc = ''
 const gameLvl = 1
-
+let spawnInterval 
   
 
 startGameBtn.addEventListener('click',()=>{
@@ -39,7 +39,7 @@ function getRandomLoc(){
 }
 
 function spawInsects(){
-    setInterval(()=>{
+    spawnInterval = setInterval(()=>{
         const { w , h} = getRandomLoc()
         const Insect = document.createElement('button')
         Insect.classList.add('created-insect-btn')
@@ -75,7 +75,11 @@ function startCountDown(){
     timeEle.innerText = `Time Remaining : ${timePending}`
     if(timePending <= 0){
         alert('Your socres are '+score)
-        window.location.reload(true)
+        clearInterval(spawnInterval)
+        window.location.href = '/'
+        // sections[0].scrollIntoView()
+        // document.scrollBy({top: 0, left: 0, behavior: 'smooth'})
+        // window.scrollTo({ top: 0, behavior: 'smooth' });
         return
     }
     setTimeout(() => {

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #51dfff;
+    font-family: 'Press Start 2P', sans-serif;
+}
+.section-first,
+.section-second{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-first button{
+    margin: 20px;
+    padding: 1rem;
+    background-color: rgb(13, 122, 122);
+    color: #fff;
+    border: none;
+    box-shadow: 1px 2px 2px black;
+}
+.section-first button:active{
+    box-shadow: 0px 0px 2px black;
+}
+.insects-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 60%;
+    justify-content: space-around;
+}
+.insects-list button {
+    padding: 10px;
+}
+.insects-list img {
+    height: 100px;
+    width: 100px;
+}
+.up{
+    margin-top: -100vh;
+}
+.section-second h1 {
+    margin: 20px;
+}
+.choose-insect-btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+.section-third{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding: 10px;
+}
+.created-insect-btn{
+    position: absolute;
+    border: none;
+    /* top: 10%;
+    left: 100px; */
+    height: 100px;
+    width: 100px;
+}
+.created-insect-btn img{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
